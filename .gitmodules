@@ -1,0 +1,3 @@
+[submodule "packages/chrome-extension-react-antd-template"]
+	path = packages/chrome-extension-react-antd-template
+	url = https://github.com/raojinlin/chrome-extension-react-antd-template.git

@@ -1,0 +1,29 @@
+{
+  "name": "create-chrome-extension",
+  "version": "1.0.0",
+  "description": "Set up a chrome extension by running one command.  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raojinlin",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/input": "^1.2.11",
+    "argparse": "^2.0.1"
+  },
+  "bin": {
+    "create-chrome-extension": "./tasks/cre.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raojinlin/create-chrome-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raojinlin/create-chrome-extension/issues",
+    "email": "1239015423@qq.com"
+  },
+  "engines": {
+    "node": ">= 16.0"
+  }
+}
