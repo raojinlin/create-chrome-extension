@@ -3,6 +3,8 @@
 
 `@raojinlin/create-chrome-extension`可以快速生成一个使用React和Ant Destign的Chrome扩展应用。
 
+[![asciicast](https://asciinema.org/a/608318.svg)](https://asciinema.org/a/608318)
+
 ## 创建扩展应用
 1. 确保你的计算机上已经安装了Node.js的版本为16.0.0或更高版本。如果尚未安装，请访问Node.js官方网站（https://nodejs.org/）并按照指示安装。
 

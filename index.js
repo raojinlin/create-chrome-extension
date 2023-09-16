@@ -1,3 +1,1 @@
-const clone = require('git-clone/promise');
-
-clone('', '')
+require('./tasks/cre');

@@ -10,8 +10,6 @@ const { version } = require('../package.json');
 
 
 async function cre() {
-    const packageJson = require('../packages/chrome-extension-react-antd-template/package.json');
-
     const rootDir = path.dirname(__dirname, '..');
     const packagesDir = path.join(rootDir, 'packages');
     const templateDir = path.join(packagesDir, 'chrome-extension-react-antd-template')
@@ -48,18 +46,18 @@ async function cre() {
     await generateManifestJSON(projectDir);
     console.log('🤖 Installing packages. This might take a couple of minutes....');
 
-    // process.chdir(projectDir);
-    // const installProc = child_process.spawn('npm', ['install'], {env: process.env});
-    // installProc.stdout.pipe(process.stdout);
-    // installProc.stderr.pipe(process.stderr);
+    process.chdir(projectDir);
+    const installProc = child_process.spawn('npm', ['install'], {env: process.env});
+    installProc.stdout.pipe(process.stdout);
+    installProc.stderr.pipe(process.stderr);
 
-    // installProc.on('error', e => {
-    //     console.error('Install error', e);
-    // });
+    installProc.on('error', e => {
+        console.error('Install error', e);
+    });
 
-    // installProc.on('exit', e => {
-    //     console.log('Packages install success.');
-    // });
+    installProc.on('exit', e => {
+        console.log('Packages install success.');
+    });
 }
 
 cre();
