@@ -39,4 +39,4 @@ npm run build
 请注意，这只是一个基本的创建Chrome扩展应用，具体的配置和功能取决于你的项目需求。你可能需要查阅Chrome扩展开发文档以深入了解如何定制你的扩展。
 
 
-另外，生成的代码使用```chrome-extension-react-antd-template```模板。关于代码的开发请参考：[README.md](packages/chrome-extension-react-antd-template/README.md)
+另外，生成的代码使用```chrome-extension-react-antd-template```模板。关于代码的开发请参考：[README.md](https://github.com/raojinlin/chrome-extension-react-antd-template/blob/master/README.md)
