@@ -5,6 +5,31 @@
 
 [![asciicast](https://asciinema.org/a/608318.svg)](https://asciinema.org/a/608318)
 
+
+## 命令行参数
+
+```bash
+usage: index.js [-h] [-v] [-p PACKAGE] [-d DESCRIPTION] [-e EXTENSION_NAME] [-x EXTENSION_DESCRIPTION] project-directory
+
+Create chrome extension
+
+positional arguments:
+  project-directory
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -p PACKAGE, --package PACKAGE
+                        Package name
+  -d DESCRIPTION, --description DESCRIPTION
+                        Package description
+  -e EXTENSION_NAME, --extension-name EXTENSION_NAME
+                        Extension name
+  -x EXTENSION_DESCRIPTION, --extension-description EXTENSION_DESCRIPTION
+                        Extension description
+
+```
+
 ## 创建扩展应用
 1. 确保你的计算机上已经安装了Node.js的版本为16.0.0或更高版本。如果尚未安装，请访问Node.js官方网站（https://nodejs.org/）并按照指示安装。
 
@@ -15,6 +40,12 @@ npx @raojinlin/create-chrome-extension my-extension
 ```
 
 这将使用npx工具创建一个名为"my-extension"的新Chrome扩展项目。
+
+或者使用参数一键创建Chrome扩展项目：
+
+```
+npx @raojinlin/create-chrome-extension my-extension --package MyChromeExtension --description 'My Chrome extension' --extension-name 'My Chrome Extension' --extension-description 'My Chrome Extension Description' 
+```
 
 3. 在项目目录中，你可以开始编写扩展代码。首先，进入项目目录：
 

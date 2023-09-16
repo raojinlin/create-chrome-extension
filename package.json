@@ -1,6 +1,6 @@
 {
   "name": "@raojinlin/create-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Set up a chrome extension by running one command.  ",
   "main": "index.js",
   "scripts": {
