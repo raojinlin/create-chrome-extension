@@ -26,4 +26,4 @@ jobs:
     - name: Build
       run: |
         npm ci
-        node index.js --package GitHubActions --description GitHubActions --extension-name GitHubActions GitHubActions --extension-description GitHubActions --extension-name GitHubActions ./github-actions
+        node index.js --package GitHubActions --description GitHubActions --extension-name GitHubActions --extension-description GitHubActions --extension-name GitHubActions ./github-actions
