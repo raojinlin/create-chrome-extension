@@ -2,6 +2,7 @@
 
 const child_process = require('child_process');
 const path = require('path');
+const os = require('os');
 const fs = require('fs');
 const { generatePackageJSON, generateManifestJSON } = require('./genereate');
 
@@ -19,7 +20,11 @@ async function cre() {
         description: 'Create chrome extension'
     });
 
-    parser.add_argument('-v', '--version', { action: 'version', version });
+    parser.add_argument('-v', '--version', {action: 'version', version});
+    parser.add_argument('-p', '--package', {help: 'Package name'})
+    parser.add_argument('-d', '--description', {help: 'Package description'})
+    parser.add_argument('-e', '--extension-name', {help: 'Extension name'})
+    parser.add_argument('-x', '--extension-description', {help: 'Extension description'})
     parser.add_argument('project-directory');
 
     const args = parser.parse_args();
@@ -42,12 +47,13 @@ async function cre() {
     console.log('✅ Extension ', project, 'created.');
 
     const templatePackageDir = path.join(projectDir, 'package.json');
-    await generatePackageJSON(templatePackageDir);
-    await generateManifestJSON(projectDir);
+    await generatePackageJSON(templatePackageDir, args['package'], args['description']);
+    await generateManifestJSON(projectDir, args['extension_name'], args['extension_description']);
     console.log('🤖 Installing packages. This might take a couple of minutes....');
 
     process.chdir(projectDir);
-    const installProc = child_process.spawn('npm', ['install'], {env: process.env});
+    const npmExecutable = os.type() === 'Windows_NT' ? 'npm.cmd' : 'npm'
+    const installProc = child_process.spawn(npmExecutable, ['install'], {env: process.env});
     installProc.stdout.pipe(process.stdout);
     installProc.stderr.pipe(process.stderr);
 
